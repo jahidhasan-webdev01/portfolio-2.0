@@ -1,5 +1,7 @@
 import { Josefin_Sans } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
+import Navbar from "@/components/shared/Navbar";
 
 const josefin_font = Josefin_Sans({
   subsets: ["latin"],
@@ -14,9 +16,24 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${josefin_font.variable} h-full antialiased`}
+      suppressHydrationWarning
+      className={`${josefin_font.className} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className="bg-gray-100 dark:bg-linear-to-br dark:from-[#0B1120] dark:via-[#163B5E] dark:to-[#18163B]">
+            <div className="w-1/2 mx-auto">
+              <Navbar />
+              {children}
+            </div>
+          </div>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
