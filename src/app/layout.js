@@ -19,18 +19,18 @@ export default function RootLayout({ children }) {
       suppressHydrationWarning
       className={`${josefin_font.className} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body 
+      suppressHydrationWarning 
+      className="bg-gray-100 dark:bg-linear-to-br dark:from-[#0B1120] dark:via-[#163B5E] dark:to-[#18163B]">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          <div className="bg-gray-100 dark:bg-linear-to-br dark:from-[#0B1120] dark:via-[#163B5E] dark:to-[#18163B]">
-            <div className="w-1/2 mx-auto">
-              <Navbar />
-              {children}
-            </div>
+          <div className="w-full md:w-2/3 lg:w-1/2 mx-auto px-5 md:px-0">
+            <Navbar />
+            {children}
           </div>
         </ThemeProvider>
       </body>
