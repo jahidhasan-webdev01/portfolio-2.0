@@ -1,6 +1,6 @@
-import NavLink from "../NavLink";
+import Logo from "../ui/Logo";
+import NavLink from "../ui/NavLink";
 import ThemeToggle from "../ui/theme-toggle";
-import Logo from "../Logo";
 
 const Navbar = () => {
     const navLinks = [

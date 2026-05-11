@@ -1,7 +1,7 @@
 import { Josefin_Sans } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
 import Navbar from "@/components/shared/Navbar";
+import { ThemeProviderWrapper } from "@/components/theme-provider";
 
 const josefin_font = Josefin_Sans({
   subsets: ["latin"],
@@ -19,10 +19,8 @@ export default function RootLayout({ children }) {
       suppressHydrationWarning
       className={`${josefin_font.className} h-full antialiased`}
     >
-      <body 
-      suppressHydrationWarning 
-      className="bg-gray-100 dark:bg-linear-to-br dark:from-[#0B1120] dark:via-[#163B5E] dark:to-[#18163B]">
-        <ThemeProvider
+      <body suppressHydrationWarning className="bg-gray-100 dark:bg-linear-to-br dark:from-[#0B1120] dark:via-[#163B5E] dark:to-[#18163B]">
+        <ThemeProviderWrapper
           attribute="class"
           defaultTheme="system"
           enableSystem
@@ -32,7 +30,7 @@ export default function RootLayout({ children }) {
             <Navbar />
             {children}
           </div>
-        </ThemeProvider>
+        </ThemeProviderWrapper>
       </body>
     </html>
   );

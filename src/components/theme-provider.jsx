@@ -1,7 +1,12 @@
-"use client"
+import { ThemeProvider } from "next-themes";
 
-import { ThemeProvider as NextThemesProvider } from "next-themes";
-
-export const ThemeProvider = ({ children, ...props }) => {
-    return <NextThemesProvider {...props}>{children}</NextThemesProvider>
+export function ThemeProviderWrapper({ children, ...props }) {
+    return (
+        <ThemeProvider
+            scriptProps={{ "data-cfasync": "false" }}
+            {...props}
+        >
+            {children}
+        </ThemeProvider>
+    )
 }

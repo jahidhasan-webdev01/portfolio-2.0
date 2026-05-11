@@ -1,7 +1,9 @@
+import Banner from "@/components/home/Banner";
+
 export default function Home() {
   return (
-    <div className="min-h-screen flex justify-center items-center">
-      <h1>Hello WORLD</h1>
+    <div className="min-h-screen">
+      <Banner />
     </div>
   );
 }
