@@ -19,7 +19,17 @@ export default function RootLayout({ children }) {
       suppressHydrationWarning
       className={`${josefin_font.className} h-full antialiased`}
     >
-      <body suppressHydrationWarning className="bg-gray-100 dark:bg-linear-to-br dark:from-[#0B1120] dark:via-[#163B5E] dark:to-[#18163B]">
+      <body
+        suppressHydrationWarning
+        className="
+          bg-gray-100
+          dark:bg-linear-to-br
+          dark:from-[#0B1120]
+          dark:via-[#163B5E]
+          dark:to-[#18163B]
+          dark:bg-fixed
+        "
+      >
         <ThemeProviderWrapper
           attribute="class"
           defaultTheme="system"
