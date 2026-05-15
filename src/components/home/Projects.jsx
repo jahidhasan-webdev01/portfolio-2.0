@@ -72,7 +72,7 @@ const Projects = () => {
                             <h3 className="text-xl lg:text-2xl font-bold text-white mb-2 transition-transform duration-300 group-hover:translate-x-1">
                                 {project.title}
                             </h3>
-                            <p className="text-sm lg:text-base text-secondary mb-5 line-clamp-2">
+                            <p className="text-sm lg:text-base text-gray-300 mb-5 line-clamp-2">
                                 {project.description}
                             </p>
 
@@ -80,7 +80,7 @@ const Projects = () => {
                                 {project.tech.map((text, index) => (
                                     <span
                                         key={index}
-                                        className="px-3 py-1 backdrop-blur-md border border-secondary rounded-md text-xs text-secondary"
+                                        className="px-3 py-1 backdrop-blur-md border border-gray-300 rounded-md text-xs text-gray-300"
                                     >
                                         {text}
                                     </span>

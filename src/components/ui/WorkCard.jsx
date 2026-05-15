@@ -5,13 +5,13 @@ import Image from 'next/image';
 import { useState } from 'react';
 
 const WorkCard = ({ experience, defaultOpen }) => {
-    const [isOpen, setIsOpen] = useState(defaultOpen);
+    const [isOpen, setIsOpen] = useState(defaultOpen); 
 
     return (
-        <div className="border rounded-md p-5 mx-auto shadow-xl transition-all duration-300">
+        <div className="border border-white dark:border-gray-600 rounded-md p-5 mx-auto shadow-xl transition-all duration-300">
             <div className="flex justify-between items-start">
                 <div className="flex gap-5">
-                    <div className="relative w-12 h-12 bg-white rounded-2xl overflow-hidden border flex items-center justify-center shrink-0">
+                    <div className="relative w-16 h-16 bg-white rounded-2xl overflow-hidden border flex items-center justify-center shrink-0">
                         <Image src={experience.logo} alt={experience.company} width={30} height={30} />
                     </div>
                     <div>

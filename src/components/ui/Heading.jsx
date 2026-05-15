@@ -1,7 +1,7 @@
 const Heading = ({ subtitle, title }) => {
     return (
         <div className="text-center">
-            <p className="text-xs uppercase tracking-[0.25em] font-bold text-secondary">
+            <p className="text-xs uppercase tracking-[0.25em] text-secondary">
                 _{subtitle}
             </p>
 
@@ -12,4 +12,4 @@ const Heading = ({ subtitle, title }) => {
     );
 };
 
-export default Heading;
+export default Heading; 

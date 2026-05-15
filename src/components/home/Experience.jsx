@@ -10,7 +10,7 @@ const Experience = () => {
       location: "Remote",
       country: "UK",
       duration: "September 2023 - December 2023",
-      logo: "/lintech_group.jpg",
+      logo: "/lintech_group.jpg", 
       points: [
         "Built and maintained scalable REST APIs using Express.js and Node.js.",
         "Designed MongoDB databases with Mongoose for efficient data management.",
@@ -35,7 +35,7 @@ const Experience = () => {
       location: "Remote",
       country: "Bangladesh",
       duration: "April 2023 - May 2023",
-      logo: "/thinky_storm.png",
+      logo: "/thinky_storm_logo2.png",
       points: [
         "Worked on production-level features after internship period in the same company.",
         "Developed and maintained full-stack web applications using MERN stack.",
@@ -60,7 +60,7 @@ const Experience = () => {
       location: "Remote",
       country: "Bangladesh",
       duration: "January 2023 - March 2023",
-      logo: "/thinky_storm.png",
+      logo: "/thinky_storm_logo2.png",
       points: [
         "Developed responsive frontend interfaces using React.js, Tailwind CSS, and DaisyUI.",
         "Built and integrated REST APIs with Node.js and Express.js.",
