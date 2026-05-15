@@ -50,7 +50,7 @@ const Banner = () => {
                             👋
                         </motion.span>
 
-                        <span className="relative inline-block min-w-[7ch]">
+                        <span className="relative inline-block text-secondary">
                             <AnimatePresence mode="wait">
                                 <motion.span
                                     key={greetings[index]}
@@ -71,8 +71,8 @@ const Banner = () => {
 
                 </span>
 
-                <p className='text-xl mt-5 lg:mt-10'>My name is,</p>
-                <h1 className='text-4xl font-extrabold my-3'>Jahid Hasan</h1>
+                <p className='text-xl text-secondary mt-5 lg:mt-10'>My name is,</p>
+                <h1 className='text-4xl text-primary font-extrabold my-3'>Jahid Hasan</h1>
 
                 <span className="whitespace-nowrap text-sm">and, I am a </span>
                 <TypeAnimation
@@ -90,7 +90,7 @@ const Banner = () => {
                     repeat={Infinity}
                 />
 
-                <p className='text-sm text-gray-700 dark:text-gray-400 mt-5'>🚀 Building modern and responsive web experiences <br />
+                <p className='text-sm text-secondary dark:text-gray-400 mt-5'>🚀 Building modern and responsive web experiences <br />
                     MERN Stack Developer passionate about clean UI, smooth performance, and scalable solutions. Open to projects & collaborations.
                 </p>
 

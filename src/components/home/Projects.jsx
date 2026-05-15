@@ -72,7 +72,7 @@ const Projects = () => {
                             <h3 className="text-xl lg:text-2xl font-bold text-white mb-2 transition-transform duration-300 group-hover:translate-x-1">
                                 {project.title}
                             </h3>
-                            <p className="text-sm lg:text-base text-gray-300 mb-5 line-clamp-2">
+                            <p className="text-sm lg:text-base text-secondary mb-5 line-clamp-2">
                                 {project.description}
                             </p>
 
@@ -80,7 +80,7 @@ const Projects = () => {
                                 {project.tech.map((text, index) => (
                                     <span
                                         key={index}
-                                        className="px-3 py-1 bg-white/10 backdrop-blur-md border border-white/20 rounded-md text-xs text-white"
+                                        className="px-3 py-1 backdrop-blur-md border border-secondary rounded-md text-xs text-secondary"
                                     >
                                         {text}
                                     </span>
@@ -91,14 +91,14 @@ const Projects = () => {
                                 <Link
                                     href={project.live}
                                     target="_blank"
-                                    className="flex items-center gap-1 text-xs text-gray-300 hover:text-white"
+                                    className="flex items-center gap-1 text-xs text-secondary hover:text-white"
                                 >
                                     Live Preview <MdArrowOutward />
                                 </Link>
                                 <Link
                                     href={project.github}
                                     target="_blank"
-                                    className="flex items-center gap-1 text-xs text-gray-300 hover:text-white"
+                                    className="flex items-center gap-1 text-xs text-secondary hover:text-white"
                                 >
                                     View Code <FaCode />
                                 </Link>
