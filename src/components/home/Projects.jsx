@@ -91,14 +91,14 @@ const Projects = () => {
                                 <Link
                                     href={project.live}
                                     target="_blank"
-                                    className="flex items-center gap-1 text-xs text-secondary hover:text-white"
+                                    className="flex items-center gap-1 text-xs text-gray-300 hover:text-white"
                                 >
                                     Live Preview <MdArrowOutward />
                                 </Link>
                                 <Link
                                     href={project.github}
                                     target="_blank"
-                                    className="flex items-center gap-1 text-xs text-secondary hover:text-white"
+                                    className="flex items-center gap-1 text-xs text-gray-300 hover:text-white"
                                 >
                                     View Code <FaCode />
                                 </Link>
