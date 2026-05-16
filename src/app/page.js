@@ -10,12 +10,12 @@ export default function Home() {
   return (
     <>
       <Banner />
+      <About />
       <Skills />
-      {/* <About /> */}
+      <Workflow />
       <Projects />
       <Experience />
       <Education />
-      <Workflow />
     </>
   );
 }

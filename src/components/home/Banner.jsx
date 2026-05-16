@@ -118,22 +118,23 @@ const Banner = () => {
 
             <div className='order-1 lg:order-2 col-span-2 lg:col-span-1'>
                 <div className="relative flex items-center justify-center">
+                    
                     {/* Animated Blob Background */}
-                <motion.div
-  animate={{
-    x: [0, 40, -30, 0],
-    y: [0, -30, 30, 0],
-    scale: [1, 1.15, 0.9, 1],
-    rotate: [0, 8, -8, 0],
-  }}
-  transition={{
-    duration: 10,
-    repeat: Infinity,
-    repeatType: "mirror",
-    ease: "easeInOut",
-  }}
-  className="absolute w-[340px] h-[340px] rounded-full blur-3xl opacity-50"
-/>
+                    <motion.div
+                        animate={{
+                            x: [0, 40, -30, 0],
+                            y: [0, -30, 30, 0],
+                            scale: [1, 1.15, 0.9, 1],
+                            rotate: [0, 8, -8, 0],
+                        }}
+                        transition={{
+                            duration: 10,
+                            repeat: Infinity,
+                            repeatType: "mirror",
+                            ease: "easeInOut",
+                        }}
+                        className="absolute w-[340px] h-[340px] rounded-full bg-gradient-to-tr from-blue-500 to-purple-500 blur-3xl opacity-50"
+                    />
 
                     <div className="relative z-10">
                         {/* Profile Image */}
