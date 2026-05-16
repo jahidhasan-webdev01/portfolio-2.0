@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
       <body
         suppressHydrationWarning
         className="
-          bg-gray-200
+          bg-gray-100
           dark:bg-linear-to-br
           dark:from-[#0B1120]
           dark:via-[#163B5E]

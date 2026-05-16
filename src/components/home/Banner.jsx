@@ -86,7 +86,7 @@ const Banner = () => {
                     ]}
                     wrapper="span"
                     speed={5}
-                    className="text-sm text-blue-500 inline-block"
+                    className="text-sm text-blue-500 inline-block font-semibold"
                     repeat={Infinity}
                 />
 

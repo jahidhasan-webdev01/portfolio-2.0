@@ -111,7 +111,7 @@ const Projects = () => {
                         :
                         <div
                             key={project.id}
-                            className="rounded-md overflow-hidden border border-white dark:border-gray-600 group flex flex-col"
+                            className="rounded-md overflow-hidden border border-gray-300 bg-gray-50 dark:bg-transparent dark:border-blue-500/20  dark:hover:border-blue-500/50 group flex flex-col"
                         >
                             <div className="relative w-full h-44 overflow-hidden">
                                 <Image
