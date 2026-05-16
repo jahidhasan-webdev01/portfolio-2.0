@@ -1,7 +1,7 @@
 const Heading = ({ subtitle, title }) => {
     return (
         <div className="text-center">
-            <p className="text-secondary font-mono text-sm tracking-widest uppercase mb-3">
+            <p className="text-secondary text-xs tracking-widest uppercase mb-3">
                 _{subtitle}
             </p>
 
