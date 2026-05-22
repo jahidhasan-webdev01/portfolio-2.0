@@ -1,5 +1,5 @@
 import { FaCode, FaLayerGroup, FaServer, FaDatabase, FaTools, FaGithub, FaNodeJs, FaPython, FaHtml5 } from "react-icons/fa";
-import { SiExpress, SiJavascript, SiTypescript } from "react-icons/si";
+import { SiExpress, SiJavascript, SiJsonwebtokens, SiMongoose, SiTypescript } from "react-icons/si";
 import Heading from "../ui/Heading";
 import { CgVercel } from "react-icons/cg";
 import { DiMongodb, DiPostgresql } from "react-icons/di";
@@ -34,7 +34,9 @@ const categories = [
         CategoryIcon: FaServer,
         skills: [
             { name: "Node.js", Icon: FaNodeJs },
-            { name: "Express.js", Icon: SiExpress }
+            { name: "Express.js", Icon: SiExpress },
+            { name: "JWT", Icon: SiJsonwebtokens },
+            { name: "Mongoose", Icon: SiMongoose },
         ],
     },
     {

@@ -7,7 +7,31 @@ import Heading from "../ui/Heading";
 const Projects = () => {
     const projects = [
         {
-            id: 1,
+            title: "DocAppoint",
+            description:
+                "A modern doctor appointment management system built with Next.js where users can browse doctors, book appointments, manage bookings, and update profiles with secure authentication using Better Auth.",
+            image: "/doc-appoint.png",
+            tech: ["Next.js", "Tailwind CSS", "Better Auth", "Express.js", "MongoDB"],
+            live: "https://doc-appoint-client-sigma.vercel.app",
+            github: "https://github.com/jahidhasan-webdev01/doc-appoint-client",
+        },
+        {
+            title: "QurbaniHat",
+            description:
+                "QurbaniHat is a modern online Qurbani animal marketplace built with Next.js where users can browse animals, view detailed information, and book animals securely with authentication and a fully responsive user experience.",
+            image: "/qurbani-hat.png",
+            tech: [
+                "Next.js",
+                "Tailwind CSS",
+                "DaisyUI",
+                "Better Auth",
+                "MongoDB",
+                "React Hook Form"
+            ],
+            live: "https://qurbani-hat-nu.vercel.app",
+            github: "https://github.com/jahidhasan-webdev01/qurbani-hat",
+        },
+        {
             title: "The Dragon News",
             description:
                 "A responsive front-end web application built with Next.js that delivers real-time news articles with user authentication and secure login using Better Auth.",
@@ -17,7 +41,6 @@ const Projects = () => {
             github: "https://github.com/jahidhasan-webdev01/the-dragon-news",
         },
         {
-            id: 2,
             title: "Influencer Gear",
             description:
                 "A app for influencer gear with product search, brand filtering, cart management using Context API, LocalStorage, and SessionStorage.",
@@ -25,26 +48,6 @@ const Projects = () => {
             tech: ["React", "React Hot Toast", "DaisyUI", "React Router"],
             live: "https://influencer-gears01.netlify.app",
             github: "https://github.com/jahidhasan-webdev01/influencer-gears",
-        },
-        {
-            id: 3,
-            title: "Portfolio Website",
-            description:
-                "Personal developer portfolio built with modern UI, dark mode, and smooth animations.",
-            image: "/the-dragon-news.png", // Replace with your actual image path
-            tech: ["Next.js", "Tailwind CSS", "Framer Motion"],
-            live: "https://yourportfolio.vercel.app",
-            github: "https://github.com/yourname/portfolio",
-        },
-        {
-            id: 4,
-            title: "Chat App – Real Time",
-            description:
-                "Realtime chat application with socket.io, typing indicator, and online users feature.",
-            image: "/the-dragon-news.png", // Replace with your actual image path
-            tech: ["React", "Socket.io", "Node.js", "MongoDB"],
-            live: "https://chatapp-demo.vercel.app",
-            github: "https://github.com/yourname/chatapp",
         },
     ];
 
@@ -58,7 +61,7 @@ const Projects = () => {
 
                     return first ?
                         <div
-                            key={project.id}
+                            key={index}
                             className={`relative rounded-md overflow-hidden group flex flex-col justify-end p-6 md:p-10 min-h-100 ${index === 0 ? "lg:col-span-2" : "col-span-1"
                                 }`}
                         >
@@ -110,7 +113,7 @@ const Projects = () => {
                         </div>
                         :
                         <div
-                            key={project.id}
+                            key={index}
                             className="rounded-md overflow-hidden border border-gray-300 bg-gray-50 dark:bg-transparent dark:border-blue-500/20  dark:hover:border-blue-500/50 group flex flex-col"
                         >
                             <div className="relative w-full h-44 overflow-hidden">

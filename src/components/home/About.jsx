@@ -21,10 +21,10 @@ const About = () => {
                         </div>
                     </div>
 
-                    <div className="border border-gray-300 bg-gray-50 dark:bg-transparent dark:border-blue-500/20 dark:hover:border-blue-500/50 rounded-md p-5">
-                        <div className="text-xs text-gray-500 uppercase tracking-widest mb-6">_About</div>
+                    <div className="border border-gray-300 bg-gray-50 dark:bg-transparent dark:border-blue-500/20 dark:hover:border-blue-500/50 rounded-md p-5 group">
+                        <div className="text-xs uppercase tracking-widest mb-6">_About</div>
                         <p className="text-base text-primary mb-5">
-                            I&apos;m <span className="text-lg font-bold">Jahid Hasan</span> — a CSE student at Daffodil International University.
+                            I&apos;m <span className="text-lg font-bold group-hover:text-blue-500 transition-colors">Jahid Hasan</span> — a CSE student at Daffodil International University.
                             I specialize in building robust full-stack applications using the MERN stack, with a keen eye for clean UI and efficient backend systems.
                         </p>
                         <div className="mb-5"></div>

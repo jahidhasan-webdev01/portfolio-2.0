@@ -5,38 +5,36 @@ import ThemeToggle from "../ui/theme-toggle";
 const Navbar = () => {
     const navLinks = [
         {
-            path: "/",
-            name: "Home"
-        },
-        {
-            path: "/about",
+            path: "#about",
             name: "About"
         },
         {
-            path: "/skills",
+            path: "#skills",
             name: "Skills"
         },
         {
-            path: "/projects",
+            path: "#projects",
             name: "Projects"
         },
         {
-            path: "/contact",
-            name: "Contact"
+            path: "#experience",
+            name: "Experience"
         },
     ]
     return (
-        <div className="pt-5 md:pt-10 flex items-center justify-center md:justify-between">
-            <div className="font-bold hidden md:block">
-                <Logo />
-            </div>
-            <div className="flex items-center gap-5">
-                {
-                    navLinks.map((nav, index) => <NavLink key={index} nav={nav} />)
-                }
-                <ThemeToggle />
-            </div>
+<div className="sticky top-0 z-50 w-full pt-5 bg-white dark:bg-[#0a192f] transition-colors duration-300">
+    <div className="max-w-7xl mx-auto flex items-center justify-between px-2 md:px-0">
+        <div className="font-bold">
+            <Logo />
         </div>
+        <div className="flex items-center gap-2 md:gap-3">
+            {
+                navLinks.map((nav, index) => <NavLink key={index} nav={nav} />)
+            }
+            <ThemeToggle />
+        </div>
+    </div>
+</div>
     );
 };
 

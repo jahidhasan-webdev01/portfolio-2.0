@@ -9,13 +9,31 @@ import Workflow from "@/components/home/Workflow";
 export default function Home() {
   return (
     <>
-      <Banner />
-      <About />
-      <Skills />
+      <section id="home">
+        <Banner />
+      </section>
+
+      <section id="about">
+        <About />
+      </section>
+
+      <section id="skills">
+        <Skills />
+      </section>
+
       <Workflow />
-      <Projects />
-      <Experience />
-      <Education />
+
+      <section id="projects">
+        <Projects />
+      </section>
+
+      <section id="experience">
+        <Experience />
+      </section>
+
+      <section id="education">
+        <Education />
+      </section>
     </>
   );
 }

@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${josefin_font.className} h-full antialiased`}
+      className={`${josefin_font.className} h-full antialiased scroll-smooth scroll-pt-24`}
     >
       <body
         suppressHydrationWarning
@@ -36,8 +36,8 @@ export default function RootLayout({ children }) {
           enableSystem
           disableTransitionOnChange
         >
-          <div className="w-full md:w-2/3 lg:w-1/2 mx-auto px-5 md:px-0">
-            <Navbar />
+          <Navbar />
+          <div className="max-w-7xl mx-auto px-2 md:px-0">
             {children}
           </div>
         </ThemeProviderWrapper>

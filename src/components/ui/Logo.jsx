@@ -12,7 +12,7 @@ const Logo = () => {
                     alt="logo"
                     height={300}
                     width={300}
-                    className="block dark:hidden w-20 h-auto"
+                    className="block dark:hidden w-16 md:w-20 h-auto"
                 />
 
                 <Image
@@ -20,7 +20,7 @@ const Logo = () => {
                     alt="logo"
                     height={300}
                     width={300}
-                    className="hidden dark:block w-20 h-auto"
+                    className="hidden dark:block w-16 md:w-20 h-auto"
                 />
             </Link>
         </>
