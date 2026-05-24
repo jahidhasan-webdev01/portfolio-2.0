@@ -20,6 +20,10 @@ const Navbar = () => {
             path: "#experience",
             name: "Experience"
         },
+        {
+            path: "#contact",
+            name: "Contact"
+        },
     ]
     return (
 <div className="sticky top-0 z-50 w-full pt-5 bg-white dark:bg-[#0a192f] transition-colors duration-300">

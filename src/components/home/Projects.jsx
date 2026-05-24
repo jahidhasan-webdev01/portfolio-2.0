@@ -62,7 +62,7 @@ const Projects = () => {
                     return first ?
                         <div
                             key={index}
-                            className={`relative rounded-md overflow-hidden group flex flex-col justify-end p-6 md:p-10 min-h-100 ${index === 0 ? "lg:col-span-2" : "col-span-1"
+                            className={`relative rounded-md overflow-hidden group flex flex-col justify-end p-6 md:p-10 min-h-80 sm:min-h-96 lg:min-h-136 ${index === 0 ? "lg:col-span-2" : "col-span-1"
                                 }`}
                         >
                             <Image
@@ -116,7 +116,7 @@ const Projects = () => {
                             key={index}
                             className="rounded-md overflow-hidden border border-gray-300 bg-gray-50 dark:bg-transparent dark:border-blue-500/20  dark:hover:border-blue-500/50 group flex flex-col"
                         >
-                            <div className="relative w-full h-44 overflow-hidden">
+                            <div className="relative w-full h-40 sm:h-48 md:h-56 overflow-hidden">
                                 <Image
                                     src={project.image}
                                     alt={project.title}

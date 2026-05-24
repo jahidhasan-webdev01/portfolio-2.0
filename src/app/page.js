@@ -1,5 +1,6 @@
 import About from "@/components/home/About";
 import Banner from "@/components/home/Banner";
+import Contact from "@/components/home/Contact";
 import Education from "@/components/home/Education";
 import Experience from "@/components/home/Experience";
 import Projects from "@/components/home/Projects";
@@ -33,6 +34,10 @@ export default function Home() {
 
       <section id="education">
         <Education />
+      </section>
+
+      <section id="contact">
+        <Contact />
       </section>
     </>
   );
