@@ -2,6 +2,7 @@ import { Josefin_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
 import { ThemeProviderWrapper } from "@/components/theme-provider";
+import { Toaster } from "react-hot-toast";
 
 const josefin_font = Josefin_Sans({
   subsets: ["latin"],
@@ -40,6 +41,10 @@ export default function RootLayout({ children }) {
           <div className="max-w-7xl mx-auto px-2 md:px-0">
             {children}
           </div>
+          <Toaster
+            position="top-center"
+            reverseOrder={false}
+          />
         </ThemeProviderWrapper>
       </body>
     </html>

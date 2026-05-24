@@ -1,6 +1,11 @@
 'use client';
 
 import React, { useState } from 'react';
+import { FaLinkedinIn } from 'react-icons/fa';
+import { IoMdCall } from 'react-icons/io';
+import { MdEmail } from 'react-icons/md';
+import toast, { Toaster } from 'react-hot-toast';
+import Heading from '../ui/Heading';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -8,7 +13,7 @@ export default function Contact() {
     email: '',
     project: '',
   });
-  const [status, setStatus] = useState('idle'); // 'idle' | 'submitting' | 'success' | 'error'
+  const [status, setStatus] = useState('idle'); 
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,33 +23,59 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('submitting');
-    
+
+    // Simulated local delay instead of an EmailJS / Network request
+    const mockSendPromise = () => 
+      new Promise((resolve) => setTimeout(resolve, 2000));
+
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1200));
-      setStatus('success');
+      // Handles the loading state, then fires the success toast after 2 seconds
+      await toast.promise(mockSendPromise(), {
+        loading: 'Sending your message...',
+        success: 'Message sent successfully! 🚀',
+        error: 'Failed to send message. Please try again.',
+      }, {
+        style: {
+          borderRadius: '6px',
+          background: '#333',
+          color: '#fff',
+          fontSize: '14px',
+        },
+      });
+
+      // Clear the form fields upon success
       setFormData({ name: '', email: '', project: '' });
     } catch (error) {
-      setStatus('error');
+      console.error('Submission error:', error);
+    } finally {
+      setStatus('idle');
     }
   };
 
   return (
     <section className="py-10">
-
-
-
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 items-start">
-          
-          <div className="md:col-span-1">
-            
-            <div className="rounded-2xl border border-current/10 p-6 flex flex-col gap-2">
+      {/* Container for notifications to render inside */}
+      <Toaster position="bottom-right" reverseOrder={false} />
+      
+      <Heading title="Contact Me" subtitle="Get in Touch"/>
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-4 gap-8 items-start">
+          <div className="md:col-span-1 space-y-2">
+            <div className="rounded-md border border-current/10 p-5 flex flex-col gap-2">
               <div>
-                <h4 className="text-sm ">Email</h4>
-                <p className="text-base font-semibold break-all mt-0.5">nuradnanchowdhury015@gmail.com</p>
-                <a href="mailto:nuradnanchowdhury015@gmail.com" className="inline-flex items-center text-sm font-medium hover:underline mt-3">
-                  Write me 
-                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
-                </a>
+               <MdEmail className='text-2xl'/>
+                <p className="text-base font-semibold break-all mt-0.5">jahidhasan.webdev01@gmail.com</p>
+              </div>
+            </div>
+            <div className="rounded-md border border-current/10 p-5 flex flex-col gap-2">
+              <div>
+               <IoMdCall className='text-2xl'/>
+                <p className="text-base font-semibold break-all mt-0.5">+880 1774 266 484</p>
+              </div>
+            </div>
+            <div className="rounded-md border border-current/10 p-5 flex flex-col gap-2">
+              <div>
+               <FaLinkedinIn className='text-2xl'/>
+                <p className="text-base font-semibold break-all mt-0.5">https://www.linkedin.com/in/jahid-hasan-webdev01</p>
               </div>
             </div>
           </div>
@@ -96,10 +127,10 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={status === 'submitting'}
-                className="w-full h-10 text-sm border border-current/20 bg-transparent font-semibold rounded-md flex items-center justify-center cursor-pointer"
+                className="w-full h-10 text-sm border border-current/20 bg-transparent font-semibold rounded-md flex items-center justify-center cursor-pointer transition-all disabled:opacity-50"
               >
                 {status === 'submitting' && (
-                  <svg className="animate-spin h-5 w-5" fill="none" viewBox="0 0 24 24">
+                  <svg className="animate-spin h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24">
                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                     <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
                   </svg>

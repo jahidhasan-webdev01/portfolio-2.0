@@ -6,7 +6,7 @@ import Image from "next/image";
 const Logo = () => {
     return (
         <>
-            <Link href={"/"}>
+            <a href={"#home"} className="hover:border-b border-black dark:border-white text-sm">
                 <Image
                     src={logoLight}
                     alt="logo"
@@ -22,7 +22,7 @@ const Logo = () => {
                     width={300}
                     className="hidden dark:block w-16 md:w-20 h-auto"
                 />
-            </Link>
+            </a>
         </>
     );
 };
