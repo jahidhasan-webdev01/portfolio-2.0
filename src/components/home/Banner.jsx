@@ -109,16 +109,21 @@ const Banner = () => {
                         </Button>
                     </Link>
 
-                    <Button variant='outline' className="cursor-pointer text-sm">
-                        <TbFileCv />
-                        <span className='translate-y-0.5'>Resume</span>
-                    </Button>
+                    <Link
+                        href="/Jahid_Resume.pdf"
+                        download="Jahid_Hasan_Resume.pdf"
+                    >
+                        <Button variant='outline' className="cursor-pointer text-sm">
+                            <TbFileCv />
+                            <span className='translate-y-0.5'>Resume</span>
+                        </Button>
+                    </Link>
                 </div>
             </div>
 
             <div className='order-1 lg:order-2 col-span-2 lg:col-span-1'>
                 <div className="relative flex items-center justify-center">
-                    
+
                     {/* Animated Blob Background */}
                     <motion.div
                         animate={{
@@ -150,7 +155,7 @@ const Banner = () => {
                 </div>
             </div>
         </div>
-    ); 
+    );
 };
 
 export default Banner;
