@@ -4,13 +4,47 @@ import WorkCard from "../ui/WorkCard";
 const Experience = () => {
   const experiences = [
     {
+      role: "Backend Developer (Intern)",
+      type: "Internship",
+      company: "JEVXO",
+      location: "Remote",
+      country: "Rajshahi, Bangladesh",
+      duration: "June 2026 - Present",
+      logo: "/jevxo.jpg",
+
+      points: [
+        "Developing and maintaining scalable backend services using Node.js and Express.js.",
+        "Building and optimizing RESTful APIs for modern web applications.",
+        "Designing and managing databases with PostgreSQL (NeonDB), Prisma, MongoDB, and Mongoose.",
+        "Implementing secure authentication and authorization using JWT.",
+        "Validating API requests with Zod and Joi to ensure data integrity and reliability.",
+        "Integrating backend services with Next.js applications and testing APIs using Postman.",
+      ],
+
+      skills: [
+        "Node.js",
+        "TypeScript",
+        "Express.js",
+        "MongoDB",
+        "Mongoose",
+        "PostgreSQL",
+        "NeonDB",
+        "Prisma",
+        "Next.js",
+        "JWT",
+        "Zod",
+        "Joi",
+        "Postman",
+      ],
+    },
+    {
       role: "Junior Backend Developer",
       type: "Full-time",
       company: "Lintech Group",
       location: "Remote",
       country: "UK",
       duration: "September 2023 - December 2023",
-      logo: "/lintech_group.jpg", 
+      logo: "/lintech_group.jpg",
       points: [
         "Built and maintained scalable REST APIs using Express.js and Node.js.",
         "Designed MongoDB databases with Mongoose for efficient data management.",

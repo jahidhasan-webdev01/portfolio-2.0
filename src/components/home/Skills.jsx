@@ -1,12 +1,12 @@
-import { FaCode, FaLayerGroup, FaServer, FaDatabase, FaTools, FaGithub, FaNodeJs, FaPython, FaHtml5 } from "react-icons/fa";
-import { SiExpress, SiJavascript, SiJsonwebtokens, SiMongoose, SiTypescript } from "react-icons/si";
+import { FaCode, FaLayerGroup, FaServer, FaDatabase, FaTools, FaGithub, FaNodeJs, FaPython, FaHtml5, FaGitAlt } from "react-icons/fa";
+import { SiDaisyui, SiExpress, SiHeroui, SiJavascript, SiJovian, SiJsonwebtokens, SiMongoose, SiNetlify, SiPostman, SiPrisma, SiRedux, SiTypescript } from "react-icons/si";
 import Heading from "../ui/Heading";
 import { CgVercel } from "react-icons/cg";
 import { DiMongodb, DiPostgresql } from "react-icons/di";
 import { GrReactjs } from "react-icons/gr";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
-import { FaCss } from "react-icons/fa6";
 import CategoryCard from "../ui/CategoryCard";
+import { ZodiacAries } from "lucide-react";
 
 const categories = [
     {
@@ -14,10 +14,8 @@ const categories = [
         CategoryIcon: FaCode,
         skills: [
             { name: "JavaScript", Icon: SiJavascript },
-            { name: "Python", Icon: FaPython },
             { name: "TypeScript", Icon: SiTypescript },
-            { name: "HTML5", Icon: FaHtml5 },
-            { name: "CSS3", Icon: FaCss },
+            { name: "Python", Icon: FaPython },
         ],
     },
     {
@@ -27,6 +25,9 @@ const categories = [
             { name: "React", Icon: GrReactjs },
             { name: "Next.js", Icon: RiNextjsFill },
             { name: "Tailwind CSS", Icon: RiTailwindCssFill },
+            { name: "DaisyUI", Icon: SiDaisyui },
+            { name: "HeroUI", Icon: SiHeroui },
+            { name: "Redux", Icon: SiRedux },
         ],
     },
     {
@@ -37,6 +38,9 @@ const categories = [
             { name: "Express.js", Icon: SiExpress },
             { name: "JWT", Icon: SiJsonwebtokens },
             { name: "Mongoose", Icon: SiMongoose },
+            { name: "Prisma", Icon: SiPrisma },
+            { name: "Zod", Icon: ZodiacAries },
+            { name: "Joi", Icon: SiJovian },
         ],
     },
     {
@@ -44,15 +48,18 @@ const categories = [
         CategoryIcon: FaDatabase,
         skills: [
             { name: "MongoDB", Icon: DiMongodb },
-            { name: "PostgreSQL", Icon: DiPostgresql }
+            { name: "PostgreSQL", Icon: DiPostgresql },
         ],
     },
     {
         title: "Tools & Technologies",
         CategoryIcon: FaTools,
         skills: [
-            { name: "Git", Icon: FaGithub },
+            { name: "Git", Icon: FaGitAlt },
+            { name: "GitHub", Icon: FaGithub },
+            { name: "Postman", Icon: SiPostman },
             { name: "Vercel", Icon: CgVercel },
+            { name: "Netlify", Icon: SiNetlify },
         ],
     },
 ];

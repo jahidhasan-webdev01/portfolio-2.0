@@ -110,12 +110,13 @@ const Banner = () => {
                     </Link>
 
                     <Link
-                        href="/Jahid_Resume.pdf"
-                        download="Jahid_Hasan_Resume.pdf"
+                        href="https://drive.google.com/uc?export=download&id=1n0JInb22tsfxM0h_GO15jJJycXWlrt-X"
+                        target="_blank"
+                        rel="noopener noreferrer"
                     >
-                        <Button variant='outline' className="cursor-pointer text-sm">
+                        <Button variant="outline" className="cursor-pointer text-sm">
                             <TbFileCv />
-                            <span className='translate-y-0.5'>Resume</span>
+                            <span className="translate-y-0.5">Resume</span>
                         </Button>
                     </Link>
                 </div>

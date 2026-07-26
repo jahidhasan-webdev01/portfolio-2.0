@@ -1,56 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaCode } from "react-icons/fa";
+import { FaCode, FaLink } from "react-icons/fa";
 import { MdArrowOutward } from "react-icons/md";
 import Heading from "../ui/Heading";
+import { projects } from "@/data/projects";
 
 const Projects = () => {
-    const projects = [
-        {
-            title: "DocAppoint",
-            description:
-                "A modern doctor appointment management system built with Next.js where users can browse doctors, book appointments, manage bookings, and update profiles with secure authentication using Better Auth.",
-            image: "/doc-appoint.png",
-            tech: ["Next.js", "Tailwind CSS", "Better Auth", "Express.js", "MongoDB"],
-            live: "https://doc-appoint-client-sigma.vercel.app",
-            github: "https://github.com/jahidhasan-webdev01/doc-appoint-client",
-        },
-        {
-            title: "QurbaniHat",
-            description:
-                "QurbaniHat is a modern online Qurbani animal marketplace built with Next.js where users can browse animals, view detailed information, and book animals securely with authentication and a fully responsive user experience.",
-            image: "/qurbani-hat.png",
-            tech: [
-                "Next.js",
-                "Tailwind CSS",
-                "DaisyUI",
-                "Better Auth",
-                "MongoDB",
-                "React Hook Form"
-            ],
-            live: "https://qurbani-hat-nu.vercel.app",
-            github: "https://github.com/jahidhasan-webdev01/qurbani-hat",
-        },
-        {
-            title: "The Dragon News",
-            description:
-                "A responsive front-end web application built with Next.js that delivers real-time news articles with user authentication and secure login using Better Auth.",
-            image: "/the-dragon-news.png",
-            tech: ["Next.js", "Tailwind", "Better Auth", "Express", "Node.js"],
-            live: "https://the-dragon-news-tawny.vercel.app",
-            github: "https://github.com/jahidhasan-webdev01/the-dragon-news",
-        },
-        {
-            title: "Influencer Gear",
-            description:
-                "A app for influencer gear with product search, brand filtering, cart management using Context API, LocalStorage, and SessionStorage.",
-            image: "/influencer-gear.png",
-            tech: ["React", "React Hot Toast", "DaisyUI", "React Router"],
-            live: "https://influencer-gears01.netlify.app",
-            github: "https://github.com/jahidhasan-webdev01/influencer-gears",
-        },
-    ];
-
     return (
         <div className="py-10">
             <Heading subtitle="Selected Work" title="Things I’ve Built" />
@@ -95,11 +50,17 @@ const Projects = () => {
 
                                 <div className="flex justify-end gap-5">
                                     <Link
+                                        href={`/projects/${project.slug}`}
+                                        className="flex items-center gap-1 text-xs text-secondary hover:text-primary"
+                                    >
+                                        View Details <MdArrowOutward />
+                                    </Link>
+                                    <Link
                                         href={project.live}
                                         target="_blank"
                                         className="flex items-center gap-1 text-xs text-gray-300 hover:text-white"
                                     >
-                                        Live Preview <MdArrowOutward />
+                                        Live Preview <FaLink />
                                     </Link>
                                     <Link
                                         href={project.github}
@@ -140,8 +101,14 @@ const Projects = () => {
                                     ))}
                                 </div>
                                 <div className="flex justify-end gap-4">
+                                    <Link
+                                        href={`/projects/${project.slug}`}
+                                        className="flex items-center gap-1 text-xs text-secondary hover:text-primary"
+                                    >
+                                        View Details <MdArrowOutward />
+                                    </Link>
                                     <Link href={project.live} target="_blank" className="flex items-center gap-1 text-xs text-secondary hover:text-primary">
-                                        Live Preview <MdArrowOutward />
+                                        Live Preview <FaLink />
                                     </Link>
                                     <Link href={project.github} target="_blank" className="flex items-center gap-1 text-xs text-secondary hover:text-primary">
                                         View Code <FaCode />
